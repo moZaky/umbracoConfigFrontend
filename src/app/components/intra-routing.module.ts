@@ -20,6 +20,7 @@ import { HttpClientModule } from '@angular/common/http';
 //     path: 'events/:eventId',
 //     component: COMPONENTS.SingleEventComponent
 //   },
+
 //   {
 //     path: 'news/:newsId',
 //     component: COMPONENTS.SingleNewsComponent
