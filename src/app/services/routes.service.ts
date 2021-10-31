@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Router, Routes } from '@angular/router';
 import { Observable } from 'rxjs';
+import { environment } from 'src/environments/environment';
 import * as COMPONENTS from "../components/intra";
 import { routeVM } from '../models/routes';
 
@@ -22,7 +23,7 @@ export class RoutesService {
 
   getRoutes(): Observable<routeVM[]> {
 
-    return this.http.get<routeVM[]>(`http://umbracoconfig.com/api/Test/GetRoutes`);
+    return this.http.get<routeVM[]>(`${environment.apiUrl}/api/Test/GetRoutes`);
   }
 
   loadSettings(): Promise<any> {

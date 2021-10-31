@@ -2,6 +2,7 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, throwError } from 'rxjs';
 import { catchError, map } from "rxjs/operators";
+import { environment } from 'src/environments/environment';
 import { menuVM } from '../models/menu';
 
 @Injectable({
@@ -12,7 +13,7 @@ export class MenuService {
   constructor(private http: HttpClient) { }
   getMenu(): Observable<menuVM[]> {
 
-    return this.http.get<menuVM[]>(`http://umbracoconfig.com/api/Test/get`);
+    return this.http.get<menuVM[]>(`${environment.apiUrl}/api/Test/get`);
   }
 
 
